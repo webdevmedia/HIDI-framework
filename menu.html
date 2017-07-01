@@ -3,36 +3,17 @@
 <head>
 	<title>menu</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-	<script type="text/javascript" src="http://www.onextrapixel.com/examples/touch-swipe/jquery.touchSwipe.min.js"></script>
+	
 
 </head>
 <body>
 
-<header class="auto-hide-header">
-	<div class="logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
 
-	<nav class="cd-primary-nav">
-		<a href="#cd-navigation" class="nav-trigger">
-			<span>
-				<em aria-hidden="true"></em>
-				Men
-			</span>
-		</a> <!-- .nav-trigger -->
-
-		<ul id="cd-navigation">
-			<li><a href="#0">The team</a></li>
-			<li><a href="#0">Our Products</a></li>
-			<li><a href="#0">Our Services</a></li>
-			<li><a href="#0">Shopping tools</a></li>
-			<li><a href="#0">Contact Us</a></li>
-		</ul>
-	</nav> <!-- .cd-primary-nav -->
-</header> <!-- .cd-auto-hide-header -->
 
 
 <div class="container">
     <div id="sidebar">
+    
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Explore</a></li>
@@ -41,6 +22,7 @@
         </ul>
     </div>
     <div class="main-content">
+
         <a href="#" data-toggle=".container" id="sidebar-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -53,12 +35,32 @@
         </div>
     </div>
     </div>
-</div>
+<header class="auto-hide-header">
+	<div class="logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
 
+	<nav class="primary-nav">
+		<a href="#" class="nav-trigger">
+			<span>
+				<em aria-hidden="true"></em>
+				Menu
+			</span>
+		</a> <!-- .nav-trigger -->
+
+		<ul id="navigation">
+			<li><a href="#0">The team</a></li>
+			<li><a href="#0">Our Products</a></li>
+			<li><a href="#0">Our Services</a></li>
+			<li><a href="#0">Shopping tools</a></li>
+			<li><a href="#0">Contact Us</a></li>
+		</ul>
+	</nav> <!-- .cd-primary-nav -->
+</header> <!-- .cd-auto-hide-header -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="http://www.onextrapixel.com/examples/touch-swipe/jquery.touchSwipe.min.js"></script>
 
 <script type="text/javascript">
 jQuery(document).ready(function($){
-	var mainHeader = $('.cd-auto-hide-header'),
+	var mainHeader = $('.auto-hide-header'),
 		secondaryNavigation = $('.cd-secondary-nav'),
 		//this applies only if secondary nav is below intro section
 		belowNavHeroContent = $('.sub-nav-hero'),
