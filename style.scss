@@ -1,0 +1,246 @@
+/*
+
+		Fonts Collection
+
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Cookie', cursive;
+font-family: 'Handlee', cursive;
+font-family: 'Parisienne', cursive;
+font-family: 'Comfortaa', cursive;
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Cookie|Dancing+Script:400,700|Handlee|Lato:300,300i,400,400i|Montserrat:300,400,500|Open+Sans+Condensed:300,700|Open+Sans:400,600,700|Oswald:200,300,400,500,600|Pacifico|Parisienne|Roboto:300,400,500');
+
+@import '_variables';
+@import '_reset';
+@import 'skins/white_skin';
+
+      	.container {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          -webkit-transition:  left 0.4s ease-in-out;
+          -moz-transition:  left 0.4s ease-in-out;
+          -ms-transition:  left 0.4s ease-in-out;
+          -o-transition:  left 0.4s ease-in-out;
+          transition:  left 0.4s ease-in-out;
+      		
+      		&.open-sidebar {
+          	left: 240px;
+      		}
+      	}
+      
+      
+      .swipe-area {
+          position: absolute;
+          width: 50px;
+          left: 0;
+      	  top: 0;
+          height: 100%;
+          background: #f3f3f3;
+          z-index: 0;
+      }
+      #sidebar {
+          background: #DF314D;
+          position: absolute;
+          width: 240px;
+          height: 100%;
+          left: -240px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+	        ul{
+	          margin: 0;
+	          padding: 0;
+	          list-style: none;
+	          	li {
+          			margin: 0;
+          			a {
+			          padding: 15px 20px;
+			          font-size: 16px;
+			          font-weight: 100;
+			          color: white;
+			          text-decoration: none;
+			          display: block;
+			          border-bottom: 1px solid #C9223D;
+			          -webkit-transition:  background 0.3s ease-in-out;
+			          -moz-transition:  background 0.3s ease-in-out;
+			          -ms-transition:  background 0.3s ease-in-out;
+			          -o-transition:  background 0.3s ease-in-out;
+			          transition:  background 0.3s ease-in-out;
+			        }
+			        &::hover{
+			        	background: #C9223D;
+			        }
+
+      			}		
+	      	}
+      	}
+     
+
+      .main-content {
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          position: relative;
+        .content{
+          	box-sizing: border-box;
+          	-moz-box-sizing: border-box;
+      		padding-left: 60px;
+      		width: 100%;
+      		h1{
+          		font-weight: 100;
+      		}
+      		p{
+          		width: 100%;
+          		line-height: 160%;
+      		}
+      	}
+      	#sidebar-toggle {
+          background: #DF314D;
+          border-radius: 3px;
+          display: block;
+          position: relative;
+          padding: 10px 7px;
+          float: left;
+          .bar{
+	           display: block;
+	          width: 18px;
+	          margin-bottom: 3px;
+	          height: 2px;
+	          background-color: #fff;
+	          border-radius: 1px;   
+      		}
+      		&:last-child{
+           		margin-bottom: 0;   
+      		}
+      	}
+      }
+     @media only screen and (min-width: 1024px) {
+  .cd-auto-hide-header {
+    height: 80px;
+  }
+}
+
+/* Navbar */
+.auto-hide-header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  	&:after {
+  		clear: both;
+  		content: "";
+  		display: block;
+	}
+	.is-hidden {
+  		-webkit-transform: translateY(-100%);
+      	-ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+	}
+	.logo,.nav-trigger {
+  			position: absolute;
+  			top: 50%;
+  			bottom: auto;
+  			-webkit-transform: translateY(-50%);
+      		-ms-transform: translateY(-50%);
+          	transform: translateY(-50%);
+	}
+	.logo {
+  		left: 5%;
+	}
+	.logo a,.logo img {
+  		display: block;
+	}
+	.nav-trigger {
+	  /* vertically align its content */
+	  display: table;
+	  height: 100%;
+	  padding: 0 1em;
+	  font-size: 1.2rem;
+	  text-transform: uppercase;
+	  color: #25283D;
+	  font-weight: bold;
+	  right: 0;
+	  border-left: 1px solid #f2f2f2;
+	  	span {
+  			/* vertically align inside parent element */
+  			display: table-cell;
+  			vertical-align: middle;
+		}
+		em, em::after, em::before {
+		/* this is the menu icon */
+		  display: block;
+		  position: relative;
+		  height: 2px;
+		  width: 22px;
+		  background-color: #25283D;
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		}
+		em {
+		  /* this is the menu central line */
+		  margin: 6px auto 14px;
+		  -webkit-transition: background-color .2s;
+		  transition: background-color .2s;
+		&::before, &::after {
+		  position: absolute;
+		  content: '';
+		  left: 0;
+		  -webkit-transition: -webkit-transform .2s;
+		  transition: -webkit-transform .2s;
+		  transition: transform .2s;
+		  transition: transform .2s, -webkit-transform .2s;
+		}
+		&::before {
+		  /* this is the menu icon top line */
+		  -webkit-transform: translateY(-6px);
+		      -ms-transform: translateY(-6px);
+		          transform: translateY(-6px);
+		}
+		::after {
+		  /* this is the menu icon bottom line */
+		  -webkit-transform: translateY(6px);
+		      -ms-transform: translateY(6px);
+		          transform: translateY(6px);
+		}
+	}
+		
+
+	}
+}
+
+
+    
+@media only screen and (min-width: 1024px) {
+  .cd-auto-hide-header .nav-trigger {
+    display: none;
+  }
+}
+a {
+  color: #8F3985;
+  text-decoration: none;
+}
